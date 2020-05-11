@@ -55,7 +55,17 @@
 	</form>
 
 	<script>
-		// Your code goes here...
+		var showPasswordCheckbox = document.querySelector('#show-password')
+		var passwordElm = document.querySelector('#password')
+
+		showPasswordCheckbox.addEventListener('click', function (event) {
+			if (event.target.checked) {
+				passwordElm.type = 'text'
+			} else {
+				passwordElm.type = 'password'
+			}
+			
+		}, false);
 	</script>
 </body>
 </html>
